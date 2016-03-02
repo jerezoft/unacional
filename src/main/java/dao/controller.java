@@ -22,7 +22,7 @@ public static String vista;
 			res = new Resultado();
 			res = em.find(Resultado.class,a);
 		   if(res == null){
-				
+				System.out.println("Todo bien");
 				vista = "error";
 			}else{
 				vista = "SUCCESS";

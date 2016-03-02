@@ -26,9 +26,8 @@ public class MBview {
 	
 	}
 	public String Validar(){
-		
-		
 	
+			
 		return controller.vista;
 	}
 

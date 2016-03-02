@@ -14,15 +14,14 @@ public class controller {
 
 private static Resultado res;
 public static String vista;
-	
+static EntityManagerFactory emf = Persistence.createEntityManagerFactory("Final");
+static EntityManager em = emf.createEntityManager();
 	public static Resultado BuscarManeraUno(int a){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Final");
-		EntityManager em = emf.createEntityManager();
+	
 			try {
 			res = new Resultado();
 			res = em.find(Resultado.class,a);
 		   if(res == null){
-				System.out.println("Todo bien");
 				vista = "error";
 			}else{
 				vista = "SUCCESS";

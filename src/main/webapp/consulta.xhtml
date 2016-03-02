@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+  <f:viewParam name="cedula" value="#{jerez.cedula}" />
+</f:metadata>	
+ 
+<h:head>
+  
+</h:head>
+<h:body>
+<ui:composition template="yalout.xhtml">
+
+
+<ui:define name="derecha">
+<h:form method="get">
+<h:outputLabel  class="lbl" for="Datos" value="Ingresa tu cedula "/>
+<h:inputText id="Datos" value="#{jerez.cedula}" />
+<h:commandButton class="btn" id="Enviar" action="#{jerez.Validar}" value="Enviar Datos"/>
+</h:form>
+
+</ui:define>
+		
+
+</ui:composition>
+</h:body>
+
+</html>

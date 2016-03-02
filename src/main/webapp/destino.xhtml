@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:metadata>
+  <f:viewParam name="cedula" value="#{jerez.cedula}" />
+</f:metadata>
+
+<h:head>
+
+</h:head>
+
+
+<h:body>
+<ui:composition template="yalout.xhtml">
+
+
+<ui:define name="derecha">
+<div class="cont">
+<h:outputText value="Nombres : #{jerez.estudianteBusqueda2.estudiante.nombres}"></h:outputText>
+<br/>
+<h:outputText value="Apellidos : #{jerez.estudianteBusqueda2.estudiante.apellidos}"></h:outputText>
+<br/>
+<h:outputText value="Documento : #{jerez.estudianteBusqueda2.cedulae}"></h:outputText>
+<br/>
+<h:outputText value="Programa : #{jerez.estudianteBusqueda2.estudiante.programa}"></h:outputText>
+<br/>
+<h:outputText value="Sede : #{jerez.estudianteBusqueda2.estudiante.sede.nombre}"></h:outputText>
+<br/>
+<h:outputText value="Ciudad de Naciemiento : #{jerez.estudianteBusqueda2.estudiante.ciudad.nombre}"></h:outputText>
+<br/>
+<h:outputText value="Departamento : #{jerez.estudianteBusqueda2.estudiante.ciudad.departamento.nombre}"></h:outputText>
+<br/>
+<h:outputText value="Genero : #{jerez.estudianteBusqueda2.estudiante.genero}"></h:outputText>
+<br/>
+<h:outputText value="Estado : #{jerez.estudianteBusqueda2.resultado}"/>
+</div>
+</ui:define>
+</ui:composition>
+
+</h:body>
+
+</html>
